@@ -19265,3 +19265,213 @@ Processing by Api::V1::BoardsController#index as HTML
 Completed 200 OK in 22ms (Views: 6.0ms | ActiveRecord: 4.5ms)
 
 
+Started GET "/api/v1/boards" for 127.0.0.1 at 2018-02-12 20:22:09 -0500
+Processing by Api::V1::BoardsController#index as HTML
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/kellyegreene/Documents/Kellye's Tings/Code/FizzBuzz2point0/Rails/config/environment.rb:5)
+Started GET "/api/v1/boards" for 127.0.0.1 at 2018-02-12 20:25:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::BoardsController#index as HTML
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 200 OK in 23ms (Views: 5.6ms | ActiveRecord: 3.7ms)
+
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/kellyegreene/Documents/Kellye's Tings/Code/FizzBuzz2point0/Rails/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/kellyegreene/Documents/Kellye's Tings/Code/FizzBuzz2point0/Rails/config/environment.rb:5)
+Started GET "/api/v1/boards" for 127.0.0.1 at 2018-02-12 20:31:16 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::BoardsController#index as HTML
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 21ms (Views: 5.6ms | ActiveRecord: 3.8ms)
+
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/kellyegreene/Documents/Kellye's Tings/Code/FizzBuzz2point0/Rails/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/kellyegreene/Documents/Kellye's Tings/Code/FizzBuzz2point0/Rails/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/kellyegreene/Documents/Kellye's Tings/Code/FizzBuzz2point0/Rails/config/environment.rb:5)
+Started GET "/api/v1/boards" for 127.0.0.1 at 2018-02-12 20:32:53 -0500
+Started GET "/api/v1/populate" for 127.0.0.1 at 2018-02-12 20:32:53 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::BoardsController#index as HTML
+Processing by Api::V1::UsersController#populate as */*
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 27ms (Views: 9.1ms | ActiveRecord: 4.5ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 27ms (ActiveRecord: 13.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/application_controller.rb:14:in `authenticate_request!'
+Started GET "/api/v1/populate" for 127.0.0.1 at 2018-02-12 20:32:54 -0500
+Started GET "/api/v1/boards" for 127.0.0.1 at 2018-02-12 20:32:54 -0500
+Processing by Api::V1::UsersController#populate as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/application_controller.rb:14:in `authenticate_request!'
+Processing by Api::V1::BoardsController#index as HTML
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/boards/1" for 127.0.0.1 at 2018-02-12 20:32:55 -0500
+Processing by Api::V1::BoardsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/application_controller.rb:14:in `authenticate_request!'
+Started GET "/api/v1/delete_token" for 127.0.0.1 at 2018-02-12 20:33:41 -0500
+Processing by Api::V1::UsersController#delete_token as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/application_controller.rb:14:in `authenticate_request!'
+Started POST "/auth_user" for 127.0.0.1 at 2018-02-12 20:33:48 -0500
+Processing by AuthenticationController#authenticate_user as */*
+  Parameters: {"email"=>"kellyecodes@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kellyecodes@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:5:in `authenticate_user'
+Started POST "/auth_user" for 127.0.0.1 at 2018-02-12 20:33:50 -0500
+Processing by AuthenticationController#authenticate_user as */*
+  Parameters: {"email"=>"kellyecodes@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kellyecodes@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:5:in `authenticate_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("password_digest", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["password_digest", "$2a$10$E61KBTFyXUiZTTkLO5IQye0vo/WVU0NTJ8ioBIXrKhzPZVqOo5ED2"], ["created_at", "2018-02-13 01:34:04.271107"], ["updated_at", "2018-02-13 01:34:04.271107"], ["email", "kellyecodes@gmail.com"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/kellyegreene/Documents/Kellye's Tings/Code/FizzBuzz2point0/Rails/config/environment.rb:5)
+Started POST "/auth_user" for 127.0.0.1 at 2018-02-12 20:34:14 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthenticationController#authenticate_user as */*
+  Parameters: {"email"=>"kellyecodes@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kellyecodes@gmail.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 94ms (Views: 4.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/api/v1/populate" for 127.0.0.1 at 2018-02-12 20:34:14 -0500
+Processing by Api::V1::UsersController#populate as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/api/v1/boards" for 127.0.0.1 at 2018-02-12 20:34:14 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT AVG("games"."final_score") FROM "games" WHERE "games"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = $1[0m  [["user_id", 2]]
+Processing by Api::V1::BoardsController#index as HTML
+  [1m[36mOption Load (0.7ms)[0m  [1m[34mSELECT "options".* FROM "options" INNER JOIN "game_options" ON "game_options"."option_id" = "options"."id" INNER JOIN "games" ON "games"."id" = "game_options"."game_id" WHERE "games"."user_id" = $1 AND "options"."correct" = $2[0m  [["user_id", 2], ["correct", "t"]]
+  [1m[36mOption Load (0.4ms)[0m  [1m[34mSELECT "options".* FROM "options" INNER JOIN "game_options" ON "game_options"."option_id" = "options"."id" INNER JOIN "games" ON "games"."id" = "game_options"."game_id" WHERE "games"."user_id" = $1 AND "options"."correct" = $2[0m  [["user_id", 2], ["correct", "f"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 67ms (Views: 2.6ms | ActiveRecord: 12.2ms)
+
+
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 33ms (Views: 0.5ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/api/v1/boards/1" for 127.0.0.1 at 2018-02-12 20:34:15 -0500
+Processing by Api::V1::BoardsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34mSELECT  "boards".* FROM "boards" WHERE "boards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "board_categories" ON "categories"."id" = "board_categories"."category_id" WHERE "board_categories"."board_id" = $1[0m  [["board_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."category_id" = $1[0m  [["category_id", 1]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."category_id" = $1[0m  [["category_id", 2]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."category_id" = $1[0m  [["category_id", 3]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."category_id" = $1[0m  [["category_id", 4]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."category_id" = $1[0m  [["category_id", 5]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.42ms)
+Completed 200 OK in 64ms (Views: 4.9ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/api/v1/questions/1" for 127.0.0.1 at 2018-02-12 20:34:19 -0500
+Processing by Api::V1::QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOption Load (0.4ms)[0m  [1m[34mSELECT "options".* FROM "options" WHERE "options"."question_id" = $1[0m  [["question_id", 1]]
+[active_model_serializers] Rendered QuestionSerializer with ActiveModelSerializers::Adapter::Attributes (12.68ms)
+Completed 200 OK in 26ms (Views: 22.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/questions/6" for 127.0.0.1 at 2018-02-12 20:46:09 -0500
+Processing by Api::V1::QuestionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mOption Load (0.4ms)[0m  [1m[34mSELECT "options".* FROM "options" WHERE "options"."question_id" = $1[0m  [["question_id", 6]]
+[active_model_serializers] Rendered QuestionSerializer with ActiveModelSerializers::Adapter::Attributes (3.17ms)
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.8ms)
+
+
