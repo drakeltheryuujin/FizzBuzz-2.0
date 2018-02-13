@@ -9,6 +9,7 @@
 This should create the user. Use the command User.last to see that the user has been added to the database with an encrypted password:
 ```<User id: 1, hometown: nil, password_digest: "$2a$10$N9XCxl3eBNYI150jKJ5TB.WG.kR5AVUeq4YSS94SDdx...", tagline: nil, created_at: "2018-02-13 00:47:33", updated_at: "2018-02-13 00:47:33", username: nil, email: "kellyecodes@gmail.com">```
 * Run `rails generate knock:install`
+* Run `rails db:seed` to import the default game data.
 * Now run the rails server with `rails s`
 * Open a new terminal tab and run the below comming replcing the email and password with the earlier created user credentials.
 ```

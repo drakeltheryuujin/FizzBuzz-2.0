@@ -18793,3 +18793,475 @@ Completed 200 OK in 18ms (Views: 8.0ms | ActiveRecord: 2.9ms)
 
 
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/api/v1/" for 127.0.0.1 at 2018-02-12 20:20:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/kellyegreene/Documents/Kellye's Tings/Code/FizzBuzz2point0/Rails/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mBoard Load (0.8ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mOption Load (0.4ms)[0m  [1m[34mSELECT "options".* FROM "options"[0m
+  [1m[36mBoardCategory Load (0.3ms)[0m  [1m[34mSELECT "board_categories".* FROM "board_categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "boards" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "ruby"], ["created_at", "2018-02-13 01:20:41.954800"], ["updated_at", "2018-02-13 01:20:41.954800"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "boards" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "sql"], ["created_at", "2018-02-13 01:20:41.957297"], ["updated_at", "2018-02-13 01:20:41.957297"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "boards" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "javascript"], ["created_at", "2018-02-13 01:20:41.958648"], ["updated_at", "2018-02-13 01:20:41.958648"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "boards" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "html"], ["created_at", "2018-02-13 01:20:41.960078"], ["updated_at", "2018-02-13 01:20:41.960078"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "boards" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "css"], ["created_at", "2018-02-13 01:20:41.961410"], ["updated_at", "2018-02-13 01:20:41.961410"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "boards" ("topic", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["topic", "react"], ["created_at", "2018-02-13 01:20:41.962768"], ["updated_at", "2018-02-13 01:20:41.962768"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Simple Expressions"], ["created_at", "2018-02-13 01:20:41.967436"], ["updated_at", "2018-02-13 01:20:41.967436"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Loops & Conditionals"], ["created_at", "2018-02-13 01:20:41.969283"], ["updated_at", "2018-02-13 01:20:41.969283"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", " Methods & Hashes"], ["created_at", "2018-02-13 01:20:41.970590"], ["updated_at", "2018-02-13 01:20:41.970590"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ruby Questions"], ["created_at", "2018-02-13 01:20:41.971919"], ["updated_at", "2018-02-13 01:20:41.971919"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Object Oriented Programming"], ["created_at", "2018-02-13 01:20:41.973235"], ["updated_at", "2018-02-13 01:20:41.973235"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "board_categories" ("category_id", "board_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["category_id", 1], ["board_id", 1], ["created_at", "2018-02-13 01:20:41.978116"], ["updated_at", "2018-02-13 01:20:41.978116"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "board_categories" ("category_id", "board_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["category_id", 2], ["board_id", 1], ["created_at", "2018-02-13 01:20:41.980503"], ["updated_at", "2018-02-13 01:20:41.980503"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "board_categories" ("category_id", "board_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["category_id", 3], ["board_id", 1], ["created_at", "2018-02-13 01:20:41.981923"], ["updated_at", "2018-02-13 01:20:41.981923"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "board_categories" ("category_id", "board_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["category_id", 4], ["board_id", 1], ["created_at", "2018-02-13 01:20:41.983442"], ["updated_at", "2018-02-13 01:20:41.983442"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "board_categories" ("category_id", "board_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["category_id", 5], ["board_id", 1], ["created_at", "2018-02-13 01:20:41.985092"], ["updated_at", "2018-02-13 01:20:41.985092"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 1], ["difficulty", 200], ["content", "What does the following expression evaluate to?\n                                                                                  2 ** 3"], ["created_at", "2018-02-13 01:20:41.991951"], ["updated_at", "2018-02-13 01:20:41.991951"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 1], ["difficulty", 400], ["content", "What does the following code return?\n                                                                                  def add(x, y)\n                                                                                    return(x + y)\n                                                                                  end\n                                                                                  add(3, 5)"], ["created_at", "2018-02-13 01:20:41.993900"], ["updated_at", "2018-02-13 01:20:41.993900"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 1], ["difficulty", 600], ["content", "What are the values of a, b, c and d?\n                                                                                  a, (b, *c), d = 1, [2, 3, 4], 5"], ["created_at", "2018-02-13 01:20:41.995449"], ["updated_at", "2018-02-13 01:20:41.995449"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 1], ["difficulty", 800], ["content", "What does the following code print?\n\n                                                                                  def first_name()\n                                                                                    return(\"Otto\")\n                                                                                  end\n\n                                                                                  def last_name()\n                                                                                    return(\"Mation\")\n                                                                                  end\n\n                                                                                  def full_name()\n                                                                                    first_name() + \" \" + last_name()\n                                                                                  end\n\n                                                                                  puts full_name()"], ["created_at", "2018-02-13 01:20:41.996887"], ["updated_at", "2018-02-13 01:20:41.996887"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 1], ["difficulty", 1000], ["content", "What does the following code print?\n                                                                                    class IceCream\n                                                                                      @temp = \"cold\"\n                                                                                    end\n                                                                                    print IceCream.instance_variables"], ["created_at", "2018-02-13 01:20:41.998434"], ["updated_at", "2018-02-13 01:20:41.998434"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 2], ["difficulty", 200], ["content", "What does the following code print?\n                                                                                    puts \"unicorn\".reverse()"], ["created_at", "2018-02-13 01:20:42.000077"], ["updated_at", "2018-02-13 01:20:42.000077"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 2], ["difficulty", 400], ["content", "arr = [\"onyx\", \"wu tang\", \"biggie\", \"tupac\"]\n                                                                                    Get the \"biggie\" string from arr."], ["created_at", "2018-02-13 01:20:42.001532"], ["updated_at", "2018-02-13 01:20:42.001532"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 2], ["difficulty", 600], ["content", "colors = [\"red\", \"violet\", \"blue\"]\n                                                                                    Use the colors array to construct the following array:\n                                                                                    [[\"red\", 1], [\"violet\", 2], [\"blue\", 3]]"], ["created_at", "2018-02-13 01:20:42.003080"], ["updated_at", "2018-02-13 01:20:42.003080"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 2], ["difficulty", 800], ["content", "days = [\"mon\", \"tues\", \"wed\", \"thur\", \"fri\"]\n                                                                                    Create an array of the elements with indexes 0 and 2. The return value should be [\"mon\", \"wed\"]."], ["created_at", "2018-02-13 01:20:42.004644"], ["updated_at", "2018-02-13 01:20:42.004644"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 2], ["difficulty", 1000], ["content", "What  does the following print\n                                                                                    enum = (\"begin\"...\"finish\").to_enum\n                                                                                    print enum.next\n                                                                                    print enum.next\n                                                                                    print enum.next"], ["created_at", "2018-02-13 01:20:42.006025"], ["updated_at", "2018-02-13 01:20:42.006025"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 3], ["difficulty", 200], ["content", "lebron = {:sport=>\"basketball\", :birthplace=>\"Akron\", :high_school=>\"St. Vincent-St. Mary High School\"}\n                                                                                    Return an array of all the keys in the lebron hash."], ["created_at", "2018-02-13 01:20:42.007357"], ["updated_at", "2018-02-13 01:20:42.007357"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 3], ["difficulty", 400], ["content", "lebron = {:sport => \"basketball\", :birthplace => \"Akron\"}\n                                                                                      Add the :high_school key to the lebron hash with the value \"St. Vincent-St. Mary High School\"."], ["created_at", "2018-02-13 01:20:42.008745"], ["updated_at", "2018-02-13 01:20:42.008745"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 3], ["difficulty", 600], ["content", "What does the following code return?\n                                                                                    browsers = {\n                                                                                      :favorite => :chrome,\n                                                                                      :favorite => :firefox,\n                                                                                      :worst => :internet_explorer\n                                                                                    }\n                                                                                    browsers[:favorite]"], ["created_at", "2018-02-13 01:20:42.010126"], ["updated_at", "2018-02-13 01:20:42.010126"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 3], ["difficulty", 800], ["content", "dude = {\n                                                                                      age: 44,\n                                                                                      weight: 250,\n                                                                                      net_worth: 25\n                                                                                    }\n                                                                                    Return the product of all the values in the dude hash (the result should be 44 * 250 * 25 = 275_000)."], ["created_at", "2018-02-13 01:20:42.011643"], ["updated_at", "2018-02-13 01:20:42.011643"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 3], ["difficulty", 1000], ["content", "What does the following code print? Explain.\n                                                                                    h = {}\n                                                                                    class Sublime\n                                                                                      @fav = \"caress me down\"\n                                                                                      def sing(obj)\n                                                                                        obj.instance_variable_set(:@greeting, \"mucho gusto\")\n                                                                                        obj.instance_variable_set(:@name, \"me llamo brad lee\")\n                                                                                      end\n                                                                                    end\n\n                                                                                    s = Sublime.new\n                                                                                    s.sing(h)\n                                                                                    p s.instance_variables\n                                                                                    p \"***\"\n                                                                                    p h.instance_variables"], ["created_at", "2018-02-13 01:20:42.012977"], ["updated_at", "2018-02-13 01:20:42.012977"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 4], ["difficulty", 200], ["content", "What are the values of a, b, c and d?\n                                                                                    a, (b, *c), d = 1, [2, 3, 4], 5"], ["created_at", "2018-02-13 01:20:42.014334"], ["updated_at", "2018-02-13 01:20:42.014334"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 4], ["difficulty", 400], ["content", "Variables that start with a capital letter are what kind of variables in Ruby?"], ["created_at", "2018-02-13 01:20:42.015647"], ["updated_at", "2018-02-13 01:20:42.015647"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 4], ["difficulty", 600], ["content", "What does the following print? print 10.step(100, 20).to_a"], ["created_at", "2018-02-13 01:20:42.016884"], ["updated_at", "2018-02-13 01:20:42.016884"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 4], ["difficulty", 800], ["content", "what does the following print\n                                                                                      thang = \"biscuits\"\n                                                                                      [1,2,3].each { |n; thang| thang = n }\n                                                                                      puts thang"], ["created_at", "2018-02-13 01:20:42.018487"], ["updated_at", "2018-02-13 01:20:42.018487"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 4], ["difficulty", 1000], ["content", "What happens when the following is run?\n                                                                                      Proc.new { |i,j| }.call(1,2,3)"], ["created_at", "2018-02-13 01:20:42.020198"], ["updated_at", "2018-02-13 01:20:42.020198"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 5], ["difficulty", 200], ["content", "Create a Celsius class that is initialized with temperature."], ["created_at", "2018-02-13 01:20:42.021500"], ["updated_at", "2018-02-13 01:20:42.021500"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 5], ["difficulty", 400], ["content", "Define a Calculator class with an add() class method."], ["created_at", "2018-02-13 01:20:42.022806"], ["updated_at", "2018-02-13 01:20:42.022806"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 5], ["difficulty", 600], ["content", "Refactor the following class to remove the argument-order dependency.\n                                                                                     class Person\n                                                                                       def initialize(name, age)\n                                                                                         @name = name\n                                                                                         @age = age\n                                                                                       end\n                                                                                     end\n\n                                                                                     class Yankees\n                                                                                       def captain\n                                                                                         Person.new(\"Jeter\", 39)\n                                                                                       end\n                                                                                     end"], ["created_at", "2018-02-13 01:20:42.024228"], ["updated_at", "2018-02-13 01:20:42.024228"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 5], ["difficulty", 800], ["content", "What does the following code print?\n                                                                                      x = 42\n                                                                                      y = \"cat\"\n                                                                                      b = binding\n                                                                                      def hi(b)\n                                                                                        b.local_variable_get(:y)\n                                                                                      end\n                                                                                      p hi(b)"], ["created_at", "2018-02-13 01:20:42.025764"], ["updated_at", "2018-02-13 01:20:42.025764"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category_id", "difficulty", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 5], ["difficulty", 1000], ["content", "What does the following code print? Explain.\n                                                                                      class Pig\n                                                                                        protected\n                                                                                        def sound\n                                                                                          \"oink!\"\n                                                                                        end\n                                                                                      end\n\n                                                                                      piggy = Pig.new\n                                                                                      p piggy.sound"], ["created_at", "2018-02-13 01:20:42.027203"], ["updated_at", "2018-02-13 01:20:42.027203"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 2], ["correct", "f"], ["content", "error"], ["created_at", "2018-02-13 01:20:42.034198"], ["updated_at", "2018-02-13 01:20:42.034198"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 2], ["correct", "f"], ["content", "xy"], ["created_at", "2018-02-13 01:20:42.036257"], ["updated_at", "2018-02-13 01:20:42.036257"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 2], ["correct", "f"], ["content", "[3, 5]"], ["created_at", "2018-02-13 01:20:42.038232"], ["updated_at", "2018-02-13 01:20:42.038232"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 2], ["correct", "t"], ["content", "8"], ["created_at", "2018-02-13 01:20:42.040728"], ["updated_at", "2018-02-13 01:20:42.040728"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 3], ["correct", "t"], ["content", "a = 1\n                                                                            b = 2\n                                                                            c = nil\n                                                                            d = 3"], ["created_at", "2018-02-13 01:20:42.043151"], ["updated_at", "2018-02-13 01:20:42.043151"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 3], ["correct", "f"], ["content", "a = 1\n                                                                            b = 2\n                                                                            c = 3\n                                                                            d = 4"], ["created_at", "2018-02-13 01:20:42.045180"], ["updated_at", "2018-02-13 01:20:42.045180"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 3], ["correct", "f"], ["content", "a = 1\n                                                                            b = nil\n                                                                            c = 3\n                                                                            d = 4"], ["created_at", "2018-02-13 01:20:42.047057"], ["updated_at", "2018-02-13 01:20:42.047057"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 3], ["correct", "f"], ["content", "a = 1\n                                                                            b = 2\n                                                                            c = nil\n                                                                            d = 4"], ["created_at", "2018-02-13 01:20:42.049224"], ["updated_at", "2018-02-13 01:20:42.049224"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 4], ["correct", "t"], ["content", "Otto Mation"], ["created_at", "2018-02-13 01:20:42.051342"], ["updated_at", "2018-02-13 01:20:42.051342"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 4], ["correct", "f"], ["content", "OttoMation"], ["created_at", "2018-02-13 01:20:42.053389"], ["updated_at", "2018-02-13 01:20:42.053389"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 4], ["correct", "f"], ["content", "error"], ["created_at", "2018-02-13 01:20:42.055083"], ["updated_at", "2018-02-13 01:20:42.055083"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 4], ["correct", "f"], ["content", "Otto + Mation"], ["created_at", "2018-02-13 01:20:42.056762"], ["updated_at", "2018-02-13 01:20:42.056762"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 5], ["correct", "f"], ["content", "[\"temp\"]"], ["created_at", "2018-02-13 01:20:42.058322"], ["updated_at", "2018-02-13 01:20:42.058322"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 5], ["correct", "f"], ["content", "temp"], ["created_at", "2018-02-13 01:20:42.059850"], ["updated_at", "2018-02-13 01:20:42.059850"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 5], ["correct", "f"], ["content", "@temp"], ["created_at", "2018-02-13 01:20:42.061308"], ["updated_at", "2018-02-13 01:20:42.061308"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 5], ["correct", "t"], ["content", "[:@temp]"], ["created_at", "2018-02-13 01:20:42.062881"], ["updated_at", "2018-02-13 01:20:42.062881"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 6], ["correct", "f"], ["content", "unicorn"], ["created_at", "2018-02-13 01:20:42.064555"], ["updated_at", "2018-02-13 01:20:42.064555"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 6], ["correct", "t"], ["content", "nrocinu"], ["created_at", "2018-02-13 01:20:42.066396"], ["updated_at", "2018-02-13 01:20:42.066396"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 6], ["correct", "f"], ["content", "nrocinU"], ["created_at", "2018-02-13 01:20:42.068202"], ["updated_at", "2018-02-13 01:20:42.068202"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 6], ["correct", "f"], ["content", "Nrocinu"], ["created_at", "2018-02-13 01:20:42.069970"], ["updated_at", "2018-02-13 01:20:42.069970"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 7], ["correct", "f"], ["content", "arr[-1]"], ["created_at", "2018-02-13 01:20:42.071666"], ["updated_at", "2018-02-13 01:20:42.071666"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 7], ["correct", "t"], ["content", "arr[2]"], ["created_at", "2018-02-13 01:20:42.073341"], ["updated_at", "2018-02-13 01:20:42.073341"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 7], ["correct", "f"], ["content", "arr[3]"], ["created_at", "2018-02-13 01:20:42.074840"], ["updated_at", "2018-02-13 01:20:42.074840"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 7], ["correct", "f"], ["content", "arr[\"biggie\"]"], ["created_at", "2018-02-13 01:20:42.076348"], ["updated_at", "2018-02-13 01:20:42.076348"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 8], ["correct", "f"], ["content", "result = []\n                                                                              colors.each_with_index do |color, index|\n                                                                                result << [\"color\", \"index\"  + 1]\n                                                                              end"], ["created_at", "2018-02-13 01:20:42.077799"], ["updated_at", "2018-02-13 01:20:42.077799"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 8], ["correct", "f"], ["content", "colors.map.with_index do |color, index|\n                                                                                [color, index] + 1\n                                                                              end"], ["created_at", "2018-02-13 01:20:42.079436"], ["updated_at", "2018-02-13 01:20:42.079436"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 8], ["correct", "f"], ["content", "result = []\n                                                                              colors.each do |color, index|\n                                                                                result << [color, index  + 1]\n                                                                              end"], ["created_at", "2018-02-13 01:20:42.081284"], ["updated_at", "2018-02-13 01:20:42.081284"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 8], ["correct", "t"], ["content", "colors.map.with_index do |color, index|\n                                                                                [color, index + 1]\n                                                                              end"], ["created_at", "2018-02-13 01:20:42.082990"], ["updated_at", "2018-02-13 01:20:42.082990"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 9], ["correct", "f"], ["content", "days.values_at(0, 3)"], ["created_at", "2018-02-13 01:20:42.084758"], ["updated_at", "2018-02-13 01:20:42.084758"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 9], ["correct", "t"], ["content", "days.select.with_index do |_, index|\n                                                                                [0, 2].include? index\n                                                                              end"], ["created_at", "2018-02-13 01:20:42.086729"], ["updated_at", "2018-02-13 01:20:42.086729"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 9], ["correct", "f"], ["content", "days.select.each_with_index do |_, index|\n                                                                                  [0, 2].include? index\n                                                                                end"], ["created_at", "2018-02-13 01:20:42.088595"], ["updated_at", "2018-02-13 01:20:42.088595"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 9], ["correct", "f"], ["content", "days.values(0, 2)"], ["created_at", "2018-02-13 01:20:42.090739"], ["updated_at", "2018-02-13 01:20:42.090739"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 10], ["correct", "f"], ["content", "begin\n                                                                              begin\n                                                                              begin"], ["created_at", "2018-02-13 01:20:42.092547"], ["updated_at", "2018-02-13 01:20:42.092547"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 10], ["correct", "f"], ["content", "begio\n                                                                              begip\n                                                                              begiq"], ["created_at", "2018-02-13 01:20:42.094161"], ["updated_at", "2018-02-13 01:20:42.094161"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 10], ["correct", "f"], ["content", "error"], ["created_at", "2018-02-13 01:20:42.095905"], ["updated_at", "2018-02-13 01:20:42.095905"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 10], ["correct", "t"], ["content", "begin\n                                                                              begio\n                                                                              begip"], ["created_at", "2018-02-13 01:20:42.097745"], ["updated_at", "2018-02-13 01:20:42.097745"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 11], ["correct", "f"], ["content", "lebron.keys"], ["created_at", "2018-02-13 01:20:42.099679"], ["updated_at", "2018-02-13 01:20:42.099679"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 11], ["correct", "f"], ["content", "lebron.values()"], ["created_at", "2018-02-13 01:20:42.104304"], ["updated_at", "2018-02-13 01:20:42.104304"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 11], ["correct", "t"], ["content", "lebron.keys()"], ["created_at", "2018-02-13 01:20:42.105801"], ["updated_at", "2018-02-13 01:20:42.105801"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 11], ["correct", "f"], ["content", "lebron.keys.all"], ["created_at", "2018-02-13 01:20:42.107246"], ["updated_at", "2018-02-13 01:20:42.107246"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 12], ["correct", "f"], ["content", "lebron.push({:high_school => \"St. Vincent-St. Mary High School\"})"], ["created_at", "2018-02-13 01:20:42.108589"], ["updated_at", "2018-02-13 01:20:42.108589"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 12], ["correct", "f"], ["content", "lebron(\"high_school\", \"St. Vincent-St. Mary High School\")"], ["created_at", "2018-02-13 01:20:42.110013"], ["updated_at", "2018-02-13 01:20:42.110013"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 12], ["correct", "f"], ["content", "lebron[:high_school].to_h(St. Vincent-St. Mary High School)"], ["created_at", "2018-02-13 01:20:42.111467"], ["updated_at", "2018-02-13 01:20:42.111467"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 12], ["correct", "t"], ["content", "lebron[:high_school] = \"St. Vincent-St. Mary High School\""], ["created_at", "2018-02-13 01:20:42.112815"], ["updated_at", "2018-02-13 01:20:42.112815"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 13], ["correct", "t"], ["content", ":firefox"], ["created_at", "2018-02-13 01:20:42.114125"], ["updated_at", "2018-02-13 01:20:42.114125"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 13], ["correct", "f"], ["content", ":chrome"], ["created_at", "2018-02-13 01:20:42.115487"], ["updated_at", "2018-02-13 01:20:42.115487"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 13], ["correct", "f"], ["content", "error"], ["created_at", "2018-02-13 01:20:42.116828"], ["updated_at", "2018-02-13 01:20:42.116828"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 13], ["correct", "f"], ["content", "[:chrome, :favorite]"], ["created_at", "2018-02-13 01:20:42.118124"], ["updated_at", "2018-02-13 01:20:42.118124"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 14], ["correct", "f"], ["content", "dude.values.sum(1) do |product, number|\n                                                                              product *= number\n                                                                              product\n                                                                            end"], ["created_at", "2018-02-13 01:20:42.119471"], ["updated_at", "2018-02-13 01:20:42.119471"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 14], ["correct", "t"], ["content", "dude.values.inject(1) do |product, number|\n                                                                                product *= number\n                                                                                product\n                                                                              end"], ["created_at", "2018-02-13 01:20:42.120832"], ["updated_at", "2018-02-13 01:20:42.120832"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 14], ["correct", "f"], ["content", "dude.values.include do |product, number|\n                                                                                product *= number\n                                                                                product\n                                                                              end"], ["created_at", "2018-02-13 01:20:42.122377"], ["updated_at", "2018-02-13 01:20:42.122377"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 14], ["correct", "f"], ["content", "dude.values.inject(1) do |product, number|\n                                                                                product * number\n                                                                                product\n                                                                              end"], ["created_at", "2018-02-13 01:20:42.124315"], ["updated_at", "2018-02-13 01:20:42.124315"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 15], ["correct", "f"], ["content", "error"], ["created_at", "2018-02-13 01:20:42.126525"], ["updated_at", "2018-02-13 01:20:42.126525"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 15], ["correct", "f"], ["content", "[]\n                                                                              \"***\"\n                                                                              [@greeting, @name]"], ["created_at", "2018-02-13 01:20:42.128452"], ["updated_at", "2018-02-13 01:20:42.128452"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 15], ["correct", "f"], ["content", "[]\n                                                                              \"***\"\n                                                                              [\"@greeting\", \"@name\"]"], ["created_at", "2018-02-13 01:20:42.130386"], ["updated_at", "2018-02-13 01:20:42.130386"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 15], ["correct", "t"], ["content", "[]\n                                                                              \"***\"\n                                                                              [:@greeting, :@name]"], ["created_at", "2018-02-13 01:20:42.132266"], ["updated_at", "2018-02-13 01:20:42.132266"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 16], ["correct", "f"], ["content", "a = 1\n                                                                               b = 2\n                                                                               c = 3\n                                                                               d = 4"], ["created_at", "2018-02-13 01:20:42.134131"], ["updated_at", "2018-02-13 01:20:42.134131"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 16], ["correct", "t"], ["content", "a = 1\n                                                                               b = 2\n                                                                               c = [3, 4]\n                                                                               d = 5"], ["created_at", "2018-02-13 01:20:42.135810"], ["updated_at", "2018-02-13 01:20:42.135810"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 16], ["correct", "f"], ["content", "a = 1\n                                                                               b = 2\n                                                                               c = nil\n                                                                               d = 3"], ["created_at", "2018-02-13 01:20:42.137608"], ["updated_at", "2018-02-13 01:20:42.137608"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 16], ["correct", "f"], ["content", "a = 1\n                                                                               b = 2\n                                                                               c = [3, 4]\n                                                                               d = nil"], ["created_at", "2018-02-13 01:20:42.139556"], ["updated_at", "2018-02-13 01:20:42.139556"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 17], ["correct", "f"], ["content", "Instance variable"], ["created_at", "2018-02-13 01:20:42.141508"], ["updated_at", "2018-02-13 01:20:42.141508"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 17], ["correct", "f"], ["content", "Global variable"], ["created_at", "2018-02-13 01:20:42.143365"], ["updated_at", "2018-02-13 01:20:42.143365"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 17], ["correct", "t"], ["content", "Class variable"], ["created_at", "2018-02-13 01:20:42.145238"], ["updated_at", "2018-02-13 01:20:42.145238"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 17], ["correct", "f"], ["content", "None of the above"], ["created_at", "2018-02-13 01:20:42.147086"], ["updated_at", "2018-02-13 01:20:42.147086"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 18], ["correct", "t"], ["content", "[10, 30, 50, 70, 90]"], ["created_at", "2018-02-13 01:20:42.149039"], ["updated_at", "2018-02-13 01:20:42.149039"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 18], ["correct", "f"], ["content", "[20, 40, 60, 80, 100]"], ["created_at", "2018-02-13 01:20:42.151107"], ["updated_at", "2018-02-13 01:20:42.151107"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 18], ["correct", "t"], ["content", "10, 30, 50, 70, 90"], ["created_at", "2018-02-13 01:20:42.153029"], ["updated_at", "2018-02-13 01:20:42.153029"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 18], ["correct", "f"], ["content", "[\"10\", \"30\", \"50\", \"70\", \"90\"]"], ["created_at", "2018-02-13 01:20:42.154860"], ["updated_at", "2018-02-13 01:20:42.154860"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 20], ["correct", "f"], ["content", "TypeError: no implicit conversion of String into Integer"], ["created_at", "2018-02-13 01:20:42.156558"], ["updated_at", "2018-02-13 01:20:42.156558"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 20], ["correct", "f"], ["content", "NameError: undefined local variable or method `lambda' for main:Object"], ["created_at", "2018-02-13 01:20:42.158206"], ["updated_at", "2018-02-13 01:20:42.158206"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 20], ["correct", "t"], ["content", "ArgumentError: wrong number of arguments (3 for 2)"], ["created_at", "2018-02-13 01:20:42.159752"], ["updated_at", "2018-02-13 01:20:42.159752"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 20], ["correct", "f"], ["content", "ArgumentError: wrong number of arguments (2 for 1)"], ["created_at", "2018-02-13 01:20:42.161306"], ["updated_at", "2018-02-13 01:20:42.161306"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 19], ["correct", "f"], ["content", "biscuits biscuits biscuits"], ["created_at", "2018-02-13 01:20:42.162846"], ["updated_at", "2018-02-13 01:20:42.162846"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 19], ["correct", "f"], ["content", "error"], ["created_at", "2018-02-13 01:20:42.164525"], ["updated_at", "2018-02-13 01:20:42.164525"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 19], ["correct", "f"], ["content", "thang"], ["created_at", "2018-02-13 01:20:42.166336"], ["updated_at", "2018-02-13 01:20:42.166336"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 19], ["correct", "t"], ["content", "biscuits"], ["created_at", "2018-02-13 01:20:42.168139"], ["updated_at", "2018-02-13 01:20:42.168139"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 21], ["correct", "f"], ["content", "class Celsius\n                                                                                  def initialize(temperature)\n                                                                                    temperature\n                                                                                  end\n                                                                                end"], ["created_at", "2018-02-13 01:20:42.169903"], ["updated_at", "2018-02-13 01:20:42.169903"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 21], ["correct", "f"], ["content", "class Celsius\n                                                                                def init(temperature)\n                                                                                  @temperature = temperature\n                                                                                end\n                                                                              end"], ["created_at", "2018-02-13 01:20:42.171913"], ["updated_at", "2018-02-13 01:20:42.171913"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 21], ["correct", "t"], ["content", "class Celsius\n                                                                                def initialize(temperature)\n                                                                                  @temperature = temperature\n                                                                                end\n                                                                              end"], ["created_at", "2018-02-13 01:20:42.173891"], ["updated_at", "2018-02-13 01:20:42.173891"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 21], ["correct", "f"], ["content", "class Celsius\n                                                                                  def initialize(temperature)\n                                                                                    temperature = @temperature\n                                                                                  end\n                                                                                end"], ["created_at", "2018-02-13 01:20:42.175880"], ["updated_at", "2018-02-13 01:20:42.175880"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 22], ["correct", "f"], ["content", "class Calculator\n                                                                                  def self.add(x, y)\n                                                                                    return(x + y)\n                                                                                  end\n                                                                                end\n                                                                                puts Calculator(3, 4)"], ["created_at", "2018-02-13 01:20:42.177782"], ["updated_at", "2018-02-13 01:20:42.177782"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 22], ["correct", "f"], ["content", "class Calculator\n                                                                                def add(x, y)\n                                                                                  x + y\n                                                                                end\n                                                                              end\n\n                                                                              puts Calculator.add(3, 4)"], ["created_at", "2018-02-13 01:20:42.179697"], ["updated_at", "2018-02-13 01:20:42.179697"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 22], ["correct", "f"], ["content", "class Calculator\n                                                                                def add(x, y)\n                                                                                  return(x + y)\n                                                                                end\n                                                                              end\n\n                                                                              puts Calculator.add(3, 4)"], ["created_at", "2018-02-13 01:20:42.181398"], ["updated_at", "2018-02-13 01:20:42.181398"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 22], ["correct", "t"], ["content", "class Calculator\n                                                                                def self.add(x, y)\n                                                                                  return(x + y)\n                                                                                end\n                                                                              end\n\n                                                                              puts Calculator.add(3, 4)"], ["created_at", "2018-02-13 01:20:42.183055"], ["updated_at", "2018-02-13 01:20:42.183055"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 23], ["correct", "t"], ["content", "class Person\n                                                                                def initialize(args)\n                                                                                  @name = args.fetch(:name)\n                                                                                  @age = args.fetch(:age)\n                                                                                end\n                                                                              end\n\n                                                                              class Yankees\n                                                                                def captain\n                                                                                  Person.new({ name: \"Jeter\", age: 39 })\n                                                                                end\n                                                                              end"], ["created_at", "2018-02-13 01:20:42.184637"], ["updated_at", "2018-02-13 01:20:42.184637"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 23], ["correct", "f"], ["content", "class Person\n                                                                                def initialize(args)\n                                                                                  @name = args(:name)\n                                                                                  @age = args(:age)\n                                                                                end\n                                                                              end\n\n                                                                              class Yankees\n                                                                                def captain\n                                                                                  Person.new({ name: \"Jeter\", age: 39 })\n                                                                                end\n                                                                              end"], ["created_at", "2018-02-13 01:20:42.186208"], ["updated_at", "2018-02-13 01:20:42.186208"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 23], ["correct", "f"], ["content", "class Person\n                                                                                def initialize(args)\n                                                                                  @name = args.fetch(name)\n                                                                                  @age = args.fetch(age)\n                                                                                end\n                                                                              end\n\n                                                                              class Yankees\n                                                                                def captain\n                                                                                  Person.new({ name: \"Jeter\", age: 39 })\n                                                                                end\n                                                                              end"], ["created_at", "2018-02-13 01:20:42.187872"], ["updated_at", "2018-02-13 01:20:42.187872"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 23], ["correct", "f"], ["content", "class Person\n                                                                                  def initialize(args)\n                                                                                    @name = args.fetch(:name)\n                                                                                    @age = args.fetch(:age)\n                                                                                  end\n                                                                                end\n\n                                                                                class Yankees\n                                                                                  def captain\n                                                                                    Person.new(\"Jeter\", 39)\n                                                                                  end\n                                                                                end"], ["created_at", "2018-02-13 01:20:42.189862"], ["updated_at", "2018-02-13 01:20:42.189862"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 24], ["correct", "f"], ["content", "hi cat"], ["created_at", "2018-02-13 01:20:42.191841"], ["updated_at", "2018-02-13 01:20:42.191841"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 24], ["correct", "f"], ["content", "error)"], ["created_at", "2018-02-13 01:20:42.193653"], ["updated_at", "2018-02-13 01:20:42.193653"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 24], ["correct", "t"], ["content", "cat"], ["created_at", "2018-02-13 01:20:42.195316"], ["updated_at", "2018-02-13 01:20:42.195316"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 24], ["correct", "f"], ["content", "nil"], ["created_at", "2018-02-13 01:20:42.197108"], ["updated_at", "2018-02-13 01:20:42.197108"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 25], ["correct", "f"], ["content", "nil"], ["created_at", "2018-02-13 01:20:42.199099"], ["updated_at", "2018-02-13 01:20:42.199099"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 25], ["correct", "t"], ["content", "error)"], ["created_at", "2018-02-13 01:20:42.200959"], ["updated_at", "2018-02-13 01:20:42.200959"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 25], ["correct", "f"], ["content", "oink!"], ["created_at", "2018-02-13 01:20:42.202648"], ["updated_at", "2018-02-13 01:20:42.202648"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "correct", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_id", 25], ["correct", "f"], ["content", "#Pig:0x007ff24ab73d58"], ["created_at", "2018-02-13 01:20:42.204165"], ["updated_at", "2018-02-13 01:20:42.204165"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "options" ("question_id", "language", "correct_answer", "open", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["question_id", 1], ["language", "RUBY"], ["correct_answer", "8"], ["open", "t"], ["created_at", "2018-02-13 01:20:42.205790"], ["updated_at", "2018-02-13 01:20:42.205790"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Rack::Cors" => Rack::Cors
+
+ (called from <top (required)> at /Users/kellyegreene/Documents/Kellye's Tings/Code/FizzBuzz2point0/Rails/config/environment.rb:5)
+Started GET "/api/v1/boards" for 127.0.0.1 at 2018-02-12 20:20:53 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::BoardsController#index as HTML
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 22ms (Views: 6.0ms | ActiveRecord: 4.5ms)
+
+
