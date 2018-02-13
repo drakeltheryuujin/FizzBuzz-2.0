@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post 'user_token' => 'user_token#create'
   resources :open_options
   # mount Knock::Engine => '/knock'
   post 'auth_user' => 'authentication#authenticate_user'

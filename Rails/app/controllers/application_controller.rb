@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::API
   include ActionController::Serialization
- 
+  include Knock::Authenticable
+
+
   attr_reader :current_user
 
   protected
